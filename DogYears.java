@@ -10,9 +10,17 @@ public class DogYears {
 
         if (dogYears <= 2 && dogYears  != 0 ) {
             System.out.println("Your dog is" + dogYears + "years old in human years");
-        } else if (dogYears == 0) {
+        } 
+        
+        else if (dogYears == 0) {
             System.out.println("This is an error, please enter a different age for your dog");
-        } else {
+        } 
+        
+        else if (dogYears > 30) {
+            System.out.println("This is an error, please enter a different age for your dog");
+        } 
+        
+        else {
             int humanYears =  ((dogYears - 2) * 5) +2 ;
             System.out.println("Your dog is " + humanYears + " years old in human years");
         }
