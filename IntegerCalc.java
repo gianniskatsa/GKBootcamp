@@ -7,11 +7,20 @@ public class IntegerCalc {
         System.out.println("Enter the first number:");
         int num1 = s.nextInt();
         System.out.println("Select Between + , - , * , / ");
-        String praksi = s.next();
+        String operation = s.next();
         System.out.println("Enter the second number:");
         int num2 = s.nextInt();
-        if (praksi.contains("+")) {
+        if (operation.contains("+")) {
             System.out.println("Your result is " + (num1 + num2));
+        }
+        if (operation.contains("-")) {
+            System.out.println("Your result is " + (num1 - num2));
+        }
+        if (operation.contains("*")) {
+            System.out.println("Your result is " + (num1 * num2));
+        }
+        if (operation.contains("/")) {
+            System.out.println("Your result is " + (num1 / num2));
         }
     }
 }
