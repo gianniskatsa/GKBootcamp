@@ -18,10 +18,10 @@ public class IndividualProjectPartA {
         addTrainersToList(sqlTrainers);
 
         List<Trainer> javaTrainers = new ArrayList<>();
-        AddJavaTrainersToList(javaTrainers);
+        addJavaTrainersToList(javaTrainers);
 
         List<Assignment> javaAssignments = new ArrayList<>();
-        AddAssignmentsToList(javaAssignments);
+        addAssignmentsToList(javaAssignments);
 
         List<Assignment> sqlAssignments = new ArrayList<>();
         addSqlAssignmentsToList(sqlAssignments);
@@ -340,8 +340,7 @@ public class IndividualProjectPartA {
                         addJavaTrainers(javaTrainers, input, trainer);
                     }
 
-                }
-                else {
+                } else {
                     for (int k = 0; k < countTrainers; k++) {
                         Trainer trainer = new Trainer();
                         addSqltrainer(sqlTrainers, input, trainer);
@@ -369,9 +368,11 @@ public class IndividualProjectPartA {
                 if (tmp.contains("A")) {
                     for (int k = 0; k < countStudents; k++) {
                         Student student = new Student();
+                        
                         addJavaStudents(javaStudents, input, student);
 //                    addAssignmentToStudentJava(javaAssignments, input);
-                    }flag1 = false;
+                    }
+                    flag1 = false;
                 } else if (tmp.contains("B")) {
                     for (int k = 0; k < countStudents; k++) {
                         Student student = new Student();
@@ -383,7 +384,8 @@ public class IndividualProjectPartA {
                         Student student = new Student();
                         addSqlStudentsPartTime(sqlStudentsPartTime, input, student);
 //                    addAssignmentToStudentSqlPartTime(sqlAssignments, input);
-                    }flag1 = false;
+                    }
+                    flag1 = false;
                 } else {
                     for (int k = 0; k < countStudents; k++) {
                         Student student = new Student();
@@ -406,74 +408,72 @@ public class IndividualProjectPartA {
     private static void programDecisionA(List<Course> courses, List<Trainer> newTrainers, List<Student> newStudents, List<Assignment> newAssignments, Scanner input) {
 
 
-               Scanner input1 = new Scanner(System.in);
-               getCount();
+        Scanner input1 = new Scanner(System.in);
+        getCount();
         for (int i = 0; i < count; i++) {
-                   Scanner input2 = new Scanner(System.in);
-                   Course course = new Course("null", "null", "null", "11-11-1111", "11-11-1111", newTrainers, newStudents, newAssignments);
-                   addIfFirstDecisionCourseDetails(input1, i, course);
-                   System.out.println("Do you wish to add trainers to this course?");
-                   if (input2.hasNext("Y")) {
-                       System.out.println("How many do you wish to add?");
-                       getCount();
-                       for (int j = 0; j < count; j++) {
-                           Trainer trainer = addIfFirstDecisionTrainersDetails(input);
-                           newTrainers.add(trainer);
-                       }
-                   }
-                   System.out.println("Do you wish to add new students to this course?");
-                   Scanner input3 = new Scanner(System.in);
-                   if (input3.hasNext("Y")) {
-                       System.out.println("How many do you wish to add?");
-                       getCount();
-                       for (int k = 0; k < count; k++) {
-                           Student student = addIfFirstDecisionStudentDetails(newAssignments, input);
-                           newStudents.add(student);
-                       }
-                   }
-                   System.out.println("Do you wish to add new assignments to this course?");
-                   Scanner input4 = new Scanner(System.in);
-                   if (input4.hasNext("Y")) {
-                       System.out.println("How many do you wish to add?");
-                       getCount();
-                       for (int k = 0; k < count; k++) {
-                           Assignment assignment = new Assignment();
-                           System.out.println("Enter assignment's title");
-                           assignment.setTitle(input.next());
-                           System.out.println("Enter assignment's description");
-                           assignment.setDescription(input.next());
-                           System.out.println("Enter Assignment's submission date time");
-                           assignment.setSubDateTime();
-                           System.out.println("Enter Assignment's oral mark");
-                           assignment.setOralMark();
-                           System.out.println("Enter Assignment's total mark");
-                           assignment.setTotalMark();
-                           newAssignments.add(assignment);
-                       }
-                   }
-                   courses.add(course);
-               }
+            Scanner input2 = new Scanner(System.in);
+            Course course = new Course("null", "null", "null", "11-11-1111", "11-11-1111", newTrainers, newStudents, newAssignments);
+            addIfFirstDecisionCourseDetails(input1, i, course);
+            System.out.println("Do you wish to add trainers to this course?");
+            if (input2.hasNext("Y")) {
+                System.out.println("How many do you wish to add?");
+                getCount();
+                for (int j = 0; j < count; j++) {
+                    Trainer trainer = addIfFirstDecisionTrainersDetails(input);
+                    newTrainers.add(trainer);
+                }
+            }
+            System.out.println("Do you wish to add new students to this course?");
+            Scanner input3 = new Scanner(System.in);
+            if (input3.hasNext("Y")) {
+                System.out.println("How many do you wish to add?");
+                getCount();
+                for (int k = 0; k < count; k++) {
+                    Student student = addIfFirstDecisionStudentDetails(newAssignments, input);
+                    newStudents.add(student);
+                }
+            }
+            System.out.println("Do you wish to add new assignments to this course?");
+            Scanner input4 = new Scanner(System.in);
+            if (input4.hasNext("Y")) {
+                System.out.println("How many do you wish to add?");
+                getCount();
+                for (int k = 0; k < count; k++) {
+                    Assignment assignment = new Assignment();
+                    System.out.println("Enter assignment's title");
+                    assignment.setTitle(input.next());
+                    System.out.println("Enter assignment's description");
+                    assignment.setDescription(input.next());
+                    System.out.println("Enter Assignment's submission date time");
+                    assignment.setSubDateTime();
+                    System.out.println("Enter Assignment's oral mark");
+                    assignment.setOralMark();
+                    System.out.println("Enter Assignment's total mark");
+                    assignment.setTotalMark();
+                    newAssignments.add(assignment);
+                }
+            }
+            courses.add(course);
+        }
 
     }
 
     private static int getCount() {
         boolean flag1;
-        do{
-            try{
-                Scanner input= new Scanner(System.in);
-                count=input.nextInt();
-                flag1=false;
-            }catch (Exception e) {
+        do {
+            try {
+                Scanner input = new Scanner(System.in);
+                count = input.nextInt();
+                flag1 = false;
+            } catch (Exception e) {
                 System.err.println("This is not a valid number. ");
                 System.out.println("Please enter a new one: ");
                 flag1 = true;
             }
 
-        }while(flag1);
+        } while (flag1);
         return count;
-        }
-
-
+    }
 
 
     private static Assignment addIfFirstDecisionAssignmentsDetails(Scanner input) {
@@ -516,17 +516,17 @@ public class IndividualProjectPartA {
     private static void addIfFirstDecisionCourseDetails(Scanner input1, int i, Course course) {
 
 
-                System.out.println("Enter details for course: " + (i + 1));
-                System.out.println("Enter Course Title: ");
-                course.setCourseTitle(input1.next());
-                System.out.println("Enter Course stream: ");
-                course.setStream(input1.next());
-                System.out.println("Enter Course type");
-                course.setType(input1.next());
-                System.out.println("Enter Course Start Date");
-                course.setStartDate();
-                System.out.println("Enter Course End Date");
-                course.setEndDate();
+        System.out.println("Enter details for course: " + (i + 1));
+        System.out.println("Enter Course Title: ");
+        course.setCourseTitle(input1.next());
+        System.out.println("Enter Course stream: ");
+        course.setStream(input1.next());
+        System.out.println("Enter Course type");
+        course.setType(input1.next());
+        System.out.println("Enter Course Start Date");
+        course.setStartDate();
+        System.out.println("Enter Course End Date");
+        course.setEndDate();
 
     }
 
@@ -627,6 +627,7 @@ public class IndividualProjectPartA {
         System.out.println("Enter student's date of birth");
         student.setDateOfBirth();
         javaStudents.add(student);
+
     }
 
     private static void addSqlStudents(List<Student> sqlStudents, Scanner input, Student student) {
@@ -648,6 +649,7 @@ public class IndividualProjectPartA {
         student.setDateOfBirth();
         sqlStudentsPartTime.add(student);
     }
+
     private static void addJavaStudentsPartTime(List<Student> javaStudentsPartTime, Scanner input, Student student) {
         System.out.println("Enter student's first name");
         student.setFirstName(input.next());
@@ -657,6 +659,7 @@ public class IndividualProjectPartA {
         student.setDateOfBirth();
         javaStudentsPartTime.add(student);
     }
+
     private static void addAssignmentsToSql(List<Assignment> sqlAssignments, Scanner input, Assignment assignment) {
         System.out.println("Enter assignment's title");
         assignment.setTitle(input.next());
@@ -734,7 +737,7 @@ public class IndividualProjectPartA {
         sqlAssignments.add(new Assignment("DynamoDB", "Create a database", "20-07-2021", 100, 100));
     }
 
-    private static void AddAssignmentsToList(List<Assignment> javaAssignments) {
+    private static void addAssignmentsToList(List<Assignment> javaAssignments) {
         javaAssignments.add(new Assignment("School", "Create a private School infrastructure", "18-10-2020", 100, 100));
         javaAssignments.add(new Assignment("Hospital", "Create a hospital terminal", "20-12-2020", 100, 100));
         javaAssignments.add(new Assignment("Elements", "Create a list of elements", "10-05-2021", 100, 100));
@@ -742,7 +745,7 @@ public class IndividualProjectPartA {
         javaAssignments.add(new Assignment("Database", "Create a database", "20-06-2021", 100, 100));
     }
 
-    private static void AddJavaTrainersToList(List<Trainer> javaTrainers) {
+    private static void addJavaTrainersToList(List<Trainer> javaTrainers) {
         javaTrainers.add(new Trainer("Vladimiros", "Fotiadis", "Java"));
         javaTrainers.add(new Trainer("Andreas", "Hliadis", "Python"));
     }

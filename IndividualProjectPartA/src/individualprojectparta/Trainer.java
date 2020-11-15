@@ -10,7 +10,9 @@ public class Trainer {
         this.firstName = name;
         this.lastName = surname;
     }
-    public Trainer(){}
+
+    public Trainer() {
+    }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
@@ -22,6 +24,6 @@ public class Trainer {
 
     @Override
     public String toString() {
-        return firstName+" "+lastName;
+        return firstName + " " + lastName;
     }
 }

@@ -14,6 +14,14 @@ public class Student {
     private double tuitionFees;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
 
+    public List<Assignment> getAssignments() {
+        return assignments;
+    }
+
+    public void setAssignments(List<Assignment> assignments) {
+        this.assignments = assignments;
+    }
+
     public Student(String fNa, String lNa, String date, double tFe, List<Assignment> assignments) {
         this.firstName = fNa;
         this.lastName = lNa;
@@ -21,7 +29,10 @@ public class Student {
         this.tuitionFees = tFe;
         this.assignments = assignments;
     }
-    public Student(){}
+
+    public Student() {
+    }
+
     List<Assignment> assignments;
 
     public List<Assignment> getAssignmentsFromStudents() {
@@ -34,7 +45,7 @@ public class Student {
         do {
             try {
                 Scanner scanner = new Scanner(System.in);
-                String inp= scanner.next();
+                String inp = scanner.next();
                 this.dateOfBirth = LocalDate.parse(inp, formatter);
                 flag1 = false;
             } catch (Exception e) {

@@ -56,14 +56,14 @@ public class Assignment {
             try {
                 Scanner scanner = new Scanner(System.in);
                 int inp = scanner.nextInt();
-                this.oralMark =inp;
+                this.oralMark = inp;
                 flag1 = false;
             } catch (Exception e) {
                 System.err.println("Invalid date value. ");
                 System.out.println("Please enter a new one: ");
                 flag1 = true;
             }
-        }while(flag1);
+        } while (flag1);
 
     }
 
@@ -73,14 +73,14 @@ public class Assignment {
             try {
                 Scanner scanner = new Scanner(System.in);
                 int inp = scanner.nextInt();
-                this.totalMark =inp;
+                this.totalMark = inp;
                 flag1 = false;
             } catch (Exception e) {
                 System.err.println("Invalid date value. ");
                 System.out.println("Please enter a new one: ");
                 flag1 = true;
             }
-        }while(flag1);
+        } while (flag1);
     }
 
     public String getTitle() {
