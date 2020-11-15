@@ -32,10 +32,10 @@ public class exercise3 {
             if (userDateBootcamp.getCheckDate().compareTo(BootCamp.getStartingDate()) >= 0
                     && userDateBootcamp.getCheckDate().compareTo(BootCamp.getEndingDate()) < 1) {
                 System.out.println("The Bootcamp " + BootCamp.getName() + " will be available in "
-                        + userDateBootcamp.getCheckDate() + "." + "The Bootcamp begins at "
-                        + BootCamp.getStartingDate() + " and ends at " + BootCamp.getEndingDate());
+                        + userDateBootcamp.getCheckDate() + "." + " The Bootcamp begins at "
+                        + BootCamp.getStartingDate() + " and ends at " + BootCamp.getEndingDate()+".");
             } else {
-                System.out.println("A Bootcamp is not available at " + userDateBootcamp.getCheckDate() + "\n");
+                System.out.println("Bootcamp "+ BootCamp.getName()+  " is not available at " + userDateBootcamp.getCheckDate() + ".");
             }
         }
     }
