@@ -6,7 +6,6 @@ import java.util.List;
 import java.lang.*;
 import java.util.Scanner;
 
-
 public class Student {
     private static final String DATE_FORMAT = "dd-MM-yyyy";
     private String firstName;
@@ -14,8 +13,6 @@ public class Student {
     private LocalDate dateOfBirth;
     private double tuitionFees;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
-
-
 
     public Student(String fNa, String lNa, String date, double tFe, List<Assignment> assignments) {
         this.firstName = fNa;
@@ -30,8 +27,6 @@ public class Student {
     public List<Assignment> getAssignmentsFromStudents() {
         return assignments;
     }
-
-
 
     public void setDateOfBirth() {
 
@@ -65,14 +60,6 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-
-    public double getTuitionFees() {
-        return tuitionFees;
-    }
-
-    public void setTuitionFees(double tuitionFees) {
-        this.tuitionFees = tuitionFees;
     }
 
     @Override

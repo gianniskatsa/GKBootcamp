@@ -50,11 +50,6 @@ public class Assignment {
         } while (flag1);
     }
 
-
-    public int getOralMark() {
-        return oralMark;
-    }
-
     public void setOralMark() {
         boolean flag1;
         do {
@@ -70,10 +65,6 @@ public class Assignment {
             }
         }while(flag1);
 
-    }
-
-    public int getTotalMark() {
-        return totalMark;
     }
 
     public void setTotalMark() {
@@ -100,10 +91,6 @@ public class Assignment {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     public void setDescription(String description) {
         this.description = description;
     }
@@ -112,6 +99,4 @@ public class Assignment {
     public String toString() {
         return title;
     }
-
-
 }

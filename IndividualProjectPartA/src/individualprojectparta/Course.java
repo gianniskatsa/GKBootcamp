@@ -40,10 +40,6 @@ public class Course {
         return assignments;
     }
 
-    public String getCourseTitle() {
-        return courseTitle;
-    }
-
     public void setCourseTitle(String courseTitle) {
         this.courseTitle = courseTitle;
     }
@@ -108,8 +104,4 @@ public class Course {
         } while (flag1);
 
     }
-
-//    public String toString() {
-//        return students.toString();
-//    }
 }
