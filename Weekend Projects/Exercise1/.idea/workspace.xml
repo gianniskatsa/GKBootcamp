@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3ca53535-b285-4b70-a9fa-54e4d0b441ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/exercise1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/exercise1.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.3.4\plugins\maven\lib\maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1jxX9U6m2IT026jh8uBYlDCDvTy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="exercise1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="exercise1" />
+      <module name="Exercise1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.exercise1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3ca53535-b285-4b70-a9fa-54e4d0b441ab" name="Default Changelist" comment="" />
+      <created>1604746567881</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604746567881</updated>
+      <workItem from="1604746612477" duration="5590000" />
+      <workItem from="1604777572644" duration="6201000" />
+      <workItem from="1604822049214" duration="4088000" />
+    </task>
+    <task id="LOCAL-00001" summary="Commit 1st exercise">
+      <created>1604753572042</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604753572042</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit 1st exercise" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 1st exercise" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="288" y="0" key="CommitChangelistDialog2" timestamp="1604753570802">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="288" y="0" key="CommitChangelistDialog2/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604753570802" />
+    <state x="460" y="139" key="FileChooserDialogImpl" timestamp="1604748001064">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="460" y="139" key="FileChooserDialogImpl/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604748001064" />
+    <state width="1317" height="189" key="GridCell.Tab.0.bottom" timestamp="1604838800665">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1323" height="345" key="GridCell.Tab.0.bottom/-1366.0.1366.768/0.0.1360.768@-1366.0.1366.768" timestamp="1604788518915" />
+    <state width="1317" height="189" key="GridCell.Tab.0.bottom/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604838800665" />
+    <state width="1317" height="189" key="GridCell.Tab.0.center" timestamp="1604838800664">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1323" height="345" key="GridCell.Tab.0.center/-1366.0.1366.768/0.0.1360.768@-1366.0.1366.768" timestamp="1604788518914" />
+    <state width="1317" height="189" key="GridCell.Tab.0.center/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604838800664" />
+    <state width="1317" height="189" key="GridCell.Tab.0.left" timestamp="1604838800664">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1323" height="345" key="GridCell.Tab.0.left/-1366.0.1366.768/0.0.1360.768@-1366.0.1366.768" timestamp="1604788518913" />
+    <state width="1317" height="189" key="GridCell.Tab.0.left/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604838800664" />
+    <state width="1317" height="189" key="GridCell.Tab.0.right" timestamp="1604838800665">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1323" height="345" key="GridCell.Tab.0.right/-1366.0.1366.768/0.0.1360.768@-1366.0.1366.768" timestamp="1604788518915" />
+    <state width="1317" height="189" key="GridCell.Tab.0.right/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604838800665" />
+    <state width="1317" height="229" key="GridCell.Tab.1.bottom" timestamp="1604759956206">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1317" height="229" key="GridCell.Tab.1.bottom/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604759956206" />
+    <state width="1317" height="229" key="GridCell.Tab.1.center" timestamp="1604759956206">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1317" height="229" key="GridCell.Tab.1.center/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604759956206" />
+    <state width="1317" height="229" key="GridCell.Tab.1.left" timestamp="1604759956206">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1317" height="229" key="GridCell.Tab.1.left/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604759956206" />
+    <state width="1317" height="229" key="GridCell.Tab.1.right" timestamp="1604759956206">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state width="1317" height="229" key="GridCell.Tab.1.right/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604759956206" />
+    <state x="271" y="4" key="new project wizard" timestamp="1604822079406">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="271" y="4" key="new project wizard/-1366.0.1366.768/0.0.1360.768@0.0.1360.768" timestamp="1604822079406" />
+  </component>
+</project>
