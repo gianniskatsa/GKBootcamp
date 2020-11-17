@@ -1,10 +1,11 @@
-package individualprojectparta;
+package schoolmanagement.beans;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.lang.*;
 import java.util.Scanner;
+
 
 public class Student {
     private static final String DATE_FORMAT = "dd-MM-yyyy";
@@ -14,9 +15,6 @@ public class Student {
     private double tuitionFees;
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern(DATE_FORMAT);
 
-    public List<Assignment> getAssignments() {
-        return assignments;
-    }
 
     public void setAssignments(List<Assignment> assignments) {
         this.assignments = assignments;
@@ -35,9 +33,10 @@ public class Student {
 
     List<Assignment> assignments;
 
-    public List<Assignment> getAssignmentsFromStudents() {
+    public List<Assignment> getAssignments() {
         return assignments;
     }
+
 
     public void setDateOfBirth() {
 
@@ -71,6 +70,14 @@ public class Student {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public double getTuitionFees() {
+        return tuitionFees;
+    }
+
+    public void setTuitionFees(double tuitionFees) {
+        this.tuitionFees = tuitionFees;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package individualprojectparta;
+package schoolmanagement.beans;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -15,33 +15,33 @@ public class Course {
     private static final String DATE_FORMAT = "dd-MM-yyyy";
     List<Trainer> trainers;
     List<Student> students;
-    List<Assignment> assignments;
+    List <Assignment> assignments;
 
-    public Course(String courseTitle, String stream, String type, String startDate, String EndDate, List<Trainer> trainers, List<Student> students, List<Assignment> assignments) {
+    public Course( String courseTitle, String stream, String type, String startDate, String EndDate, List<Trainer> trainers,List<Student> students, List<Assignment> assignments) {
         this.courseTitle = courseTitle;
         this.stream = stream;
         this.type = type;
-        this.startDate = LocalDate.parse(startDate, formatter);
-        this.endDate = LocalDate.parse(EndDate, formatter);
-        this.trainers = trainers;
-        this.students = students;
-        this.assignments = assignments;
+        this.startDate =LocalDate.parse(startDate, formatter) ;
+        this.endDate = LocalDate.parse(EndDate,formatter);
+        this.trainers=trainers;
+        this.students=students;
+        this.assignments=assignments;
 
     }
-
-    public Course() {
-    }
+    public Course(){}
 
     public List<Trainer> getTrainers() {
         return trainers;
     }
-
     public List<Student> getStudents() {
         return students;
     }
-
     public List<Assignment> getAssignments() {
         return assignments;
+    }
+
+    public String getCourseTitle() {
+        return courseTitle;
     }
 
     public void setCourseTitle(String courseTitle) {
@@ -73,7 +73,7 @@ public class Course {
         do {
             try {
                 Scanner scanner = new Scanner(System.in);
-                String inp = scanner.next();
+                String inp= scanner.next();
                 this.startDate = LocalDate.parse(inp, formatter);
                 flag1 = false;
             } catch (Exception e) {
@@ -96,7 +96,7 @@ public class Course {
         do {
             try {
                 Scanner scanner = new Scanner(System.in);
-                String inp = scanner.next();
+                String inp= scanner.next();
                 this.endDate = LocalDate.parse(inp, formatter);
                 flag1 = false;
             } catch (Exception e) {
@@ -107,5 +107,10 @@ public class Course {
 
         } while (flag1);
 
+    }
+
+    public String toString() {
+        return "The trainers for the course "+ " "+getCourseTitle()
+                + getStream() + " " + getType() + " are ";
     }
 }
