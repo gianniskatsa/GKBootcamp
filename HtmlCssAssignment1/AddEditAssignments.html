@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <title>Private School Management Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/project-style.css">
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <header id="header">
+                <div class="logo">
+                    <a href="project_index.html">School Website</a>
+                </div>
+            </header>
+            <section class="forms">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h2>Edit or add a new Assignment's Details</h2>
+                            </div>
+                            <label for="myselect2"></label><select name="category" id="myselect2" required>
+                            <option value="" selected>Select Assignment</option>
+                            <option value="Website_Create a website_25_100_2020-02-04">Website</option>
+                            <option value="Data Structure_Create a data structure_25_100_2020-06-07">Data structure
+                            </option>
+                            <option value="Back End_Create the back end_25_100_2020-08-10">Back End</option>
+                            <option value="Database_Create a database_20_100_2020-09-10">Database</option>
+                        </select>
+                            <button class="filled-icon-button" title="Press to begin adding or editing" onclick="enableSimpleAssignmentFields()">Edit</button>
+                            <form id="contact" name="form" action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput"></label><input name="asigtitle" minlength="3"
+                                                                                type="text" class="form-control"
+                                                                                placeholder="Enter Assignment's title"
+                                                                                id="myinput" disabled
+                                                                                required="">
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput1"></label><input name="description" minlength="3"
+                                                                                 type="text" class="form-control"
+                                                                                 placeholder="Enter Assignment's description"
+                                                                                 required="" id="myinput1" disabled>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput3"></label><input name="omark" type="number"
+                                                                                 class="form-control" id="myinput3"
+                                                                                 placeholder="Enter Assignment's oral mark"
+                                                                                 required="" disabled>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput4"></label><input name="tmark" type="number"
+                                                                                 class="form-control" id="myinput4"
+                                                                                 placeholder="Enter Assignment's total mark"
+                                                                                 required="" disabled>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-12">
+                                        Enter Assignment's submission date time:
+                                        <label for="myinput5"></label><input name="subdatetime" type="date"
+                                                                             class="form-control " id="myinput5"
+                                                                             placeholder="Enter Assignment's submission date time"
+                                                                             required="" disabled>
+                                    </div>
+                                    <div class="col-md-6">
+                                    </div>
+                                </div>
+                            </form>
+                            <button class="filled-icon-button" type="submit" title="Press to submit" onclick="return submitSuccessE()">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Menu -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="project_index.html">Homepage</a></li>
+                    <li>
+                        <span class="opener">Simple Management Options</span>
+                        <ul>
+                            <li><a href="AddEditStudents.html">Add / Edit / Update Students</a></li>
+                            <li><a href="AddEditCourses.html">Add / Edit / Update Courses</a></li>
+                            <li><a href="AddEditTrainers.html">Add / Edit / Update Trainers</a></li>
+                            <li><a href="AddEditAssignments.html">Add / Edit / Update Assignments</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Complex Management Options</span>
+                        <ul>
+                            <li><a href="AddEditTrainersPerCourse.html">Add / Edit / Update Trainers per Course</a></li>
+                            <li><a href="AddEditStudentsPerCourse.html">Add / Edit / Update Students per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerCourse.html">Add/ Edit / Update Assignments per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerStudentPerCourse.html">Add/ Edit / Update Assignments per Student per Course</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/checks.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/transition.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

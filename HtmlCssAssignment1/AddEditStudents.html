@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <title>Private School Management Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/project-style.css">
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <header id="header">
+                <div class="logo">
+                    <a href="project_index.html">School Website</a>
+                </div>
+            </header>
+            <section class="forms">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="section-heading">
+                                <h2>Edit or add a new Student's Details</h2>
+                            </div>
+                            <label for="myselect1"></label><select name="category" id="myselect1" required>
+                            <option value="" selected>Select Student</option>
+                            <option value="Giannis_Katsanakis_2500_1991-02-04">Giannis Katsanakis</option>
+                            <option value="Maria_Georgioy_1800_1989-06-07">Maria Georgioy</option>
+                            <option value="Kostas_Kosta_1900_1995-08-10">Kostas Kosta</option>
+                            <option value="Katerina_Lamproy_2200_1999-09-10">Katerina Lamproy</option>
+                        </select>
+                            <button class="filled-icon-button" title="Press to begin adding or editing"  onclick="enableStudentFields()">Edit</button>
+                            <form id="contact" name="form" action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput"></label><input name="firstName" minlength="3" type="text" class="form-control"
+                                                                                id="myinput"
+                                                                                placeholder="Enter Student's First name" required="" disabled>
+                                        </fieldset>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <fieldset>
+                                            <label for="myinput1"></label><input name="lastName" minlength="3" type="text" class="form-control"
+                                                                                 id="myinput1"
+                                                                                 placeholder="Enter Student's Last Name" required="" disabled>
+                                        </fieldset>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <label for="myinput5"></label><input name="subject" type="text" class="form-control " id="myinput5"
+                                                                             placeholder="Enter tuition fees" required="" disabled>
+                                    </div>
+                                    <div class="col-md-12">
+                                        Enter date of birth
+                                        <label for="myinput3"></label><input name="dob" type="date" class="form-control " id="myinput3"
+                                                                             placeholder="Enter date of birth" required="" disabled>
+                                    </div>
+                                </div>
+                            </form>
+                            <button class="filled-icon-button" type="submit" title="Press to submit" onclick="return submitSuccessD()">
+                                Submit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Menu -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="project_index.html">Homepage</a></li>
+                    <li>
+                        <span class="opener">Simple Management Options</span>
+                        <ul>
+                            <li><a href="AddEditStudents.html">Add / Edit / Update Students</a></li>
+                            <li><a href="AddEditCourses.html">Add / Edit / Update Courses</a></li>
+                            <li><a href="AddEditTrainers.html">Add / Edit / Update Trainers</a></li>
+                            <li><a href="AddEditAssignments.html">Add / Edit / Update Assignments</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Complex Management Options</span>
+                        <ul>
+                            <li><a href="AddEditTrainersPerCourse.html">Add / Edit / Update Trainers per Course</a></li>
+                            <li><a href="AddEditStudentsPerCourse.html">Add / Edit / Update Students per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerCourse.html">Add/ Edit / Update Assignments per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerStudentPerCourse.html">Add/ Edit / Update Assignments per Student per Course</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/checks.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/transition.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

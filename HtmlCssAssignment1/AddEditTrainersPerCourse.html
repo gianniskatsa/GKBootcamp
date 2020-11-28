@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <title>Private School Management Application</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/project-style.css">
+</head>
+<body class="is-preload">
+<div id="wrapper">
+    <div id="main">
+        <div class="inner">
+            <header id="header">
+                <div class="logo">
+                    <a href="project_index.html">School Website</a>
+                </div>
+            </header>
+            <section class="forms">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="section-heading">
+                            <h2>Edit or add a new Trainer's Details</h2>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="myselect3"></label><select name="category" id="myselect3" required>
+                                    <option value="" selected>Select Trainer</option>
+                                    <option value="Vladimiros_Fotiadis_Java">Vladimiros Fotiadis Java</option>
+                                    <option value="Lena_Pantelaki_Front End">Lena Pantelaki Front End</option>
+                                    <option value="Giorgos_Pasparakis_Databases">Giorgos Pasparakis Databases
+                                    </option>
+                                    <option value="Antonis_Andreou_Python">Antonis Andreou Python</option>
+                                </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="myselect4"></label><select name="category" id="myselect4" required>
+                                    <option value="" selected>Select Course</option>
+                                    <option value="CB12_Java_Full Time_2020-05-06_2020-06-08">CB12 Java Full Time
+                                    </option>
+                                    <option value="CB10_Python_Part Time_2020-02-03_2021-07-05">CB10 Python Part Time
+                                    </option>
+                                    <option value="CB11_HTML_Part Time_2018-06-09_2019-04-01">CB11 HTML Part Time
+                                    </option>
+                                    <option value="CB09_CSS HTML_Full Time_2017-11-12_2019-10-08">CB9 CSS HTML Full Time
+                                    </option>
+                                </select>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="filled-icon-button" title="Press to begin adding or editing" onclick="enableAssignmentFields()">Edit</button>
+                        <form id="contact" name="formTrainers" action="" method="post">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label for="myinput"></label><input name="firstName" type="text"
+                                                                            class="form-control" id="myinput"
+                                                                            placeholder="Enter First name"
+                                                                            required="" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label for="myinput1"></label><input name="lastName" type="text"
+                                                                             class="form-control" id="myinput1"
+                                                                             placeholder="Enter Last Name"
+                                                                             required="" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label for="myinput2"></label><input name="ctitle" minlength="3" type="text"
+                                                                            class="form-control"
+                                                                            id="myinput2"
+                                                                            placeholder="Enter Course's title"
+                                                                            required="" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6">
+                                    <fieldset>
+                                        <label for="myinput3"></label><input name="stream" minlength="3" type="text"
+                                                                             class="form-control"
+                                                                             id="myinput3"
+                                                                             placeholder="Enter Course's stream"
+                                                                             required="" disabled>
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="myinput4"></label><input name="subject" minlength="3" type="text"
+                                                                         class="form-control "
+                                                                         id="myinput4"
+                                                                         placeholder="Enter Course's type"
+                                                                         required="" disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    Enter start date:
+                                    <label for="myinput5"></label><input name="sdate" type="date"
+                                                                         class="form-control" id="myinput5"
+                                                                         placeholder="Enter start date" required=""
+                                                                         disabled>
+                                </div>
+                                <div class="col-md-6">
+                                    Enter end date:
+                                    <label for="myinput6"></label><input name="edate" type="date"
+                                                                         class="form-control " id="myinput6"
+                                                                         placeholder="Enter end date" required=""
+                                                                         disabled>
+                                </div>
+
+
+                                <button class="filled-icon-button" type="submit" title="Press to submit" onclick=" return submitSuccess()">
+                                    Submit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="inner">
+            <!-- Menu -->
+            <nav id="menu">
+                <ul>
+                    <li><a href="project_index.html">Homepage</a></li>
+                    <li>
+                        <span class="opener">Simple Management Options</span>
+                        <ul>
+                            <li><a href="AddEditStudents.html">Add / Edit / Update Students</a></li>
+                            <li><a href="AddEditCourses.html">Add / Edit / Update Courses</a></li>
+                            <li><a href="AddEditTrainers.html">Add / Edit / Update Trainers</a></li>
+                            <li><a href="AddEditAssignments.html">Add / Edit / Update Assignments</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <span class="opener">Complex Management Options</span>
+                        <ul>
+                            <li><a href="AddEditTrainersPerCourse.html">Add / Edit / Update Trainers per Course</a></li>
+                            <li><a href="AddEditStudentsPerCourse.html">Add / Edit / Update Students per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerCourse.html">Add/ Edit / Update Assignments per Course</a></li>
+                            <li><a href="AddEditAssignmentsPerStudentPerCourse.html">Add/ Edit / Update Assignments per Student per Course</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/checks.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/transition.js"></script>
+<script src="assets/js/owl-carousel.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>
