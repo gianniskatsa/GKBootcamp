@@ -87,7 +87,11 @@ function submitSuccessT() {
     var x = document.getElementById("myinput").value
     var y = document.getElementById("myinput1").value
     var z = document.getElementById("myinput2").value
-    if (x.length > 3 && y.length > 3 && z.length > 3) {
+    var valueDate2 = document.getElementById("myinput5").value
+    var valueDate3 = document.getElementById("myinput6").value
+
+    if (x.length > 3 && y.length > 3 && z.length > 3&& Date.parse(valueDate2)
+        && Date.parse(valueDate3) && Date.parse(valueDate2) < Date.parse(valueDate3)) {
         alert("Your input " + x + " " + y + " " + z + " has been successfully submitted");
         return true;
     } else {

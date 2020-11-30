@@ -30,7 +30,6 @@ h4 {
 	letter-spacing: 0.25px;
 }
 
-
 .primary-button a,
 button {
 	font-size: 14px;
@@ -181,11 +180,6 @@ section.forms .container-fluid {
     box-shadow: none;
     border-color: #535ba0;
 }
-
-
-
-
-
 
 /* Buttons */
 section.buttons {
@@ -354,17 +348,8 @@ section.buttons .container-fluid {
     #sidebar.inactive {
         margin-left: -380px;
     }
-    #sidebar > .inner > #search  {
-	    width: 380px;
-	    margin-left: -30px;
-	}
 	#menu {
 		margin-top: 30px;
-	}
-	.featured-posts {
-		margin-left: -30px!important;
-		margin-right: -30px!important;
-		padding: 30px!important;
 	}
 }
 
@@ -462,12 +447,7 @@ section.buttons .container-fluid {
     .main-banner .banner-content .banner-caption {
     	padding: 30px;
     }
-    .contact-form button {
-        margin-bottom: 30px;
-    }
 }
-
-
 
 /* Header */
 
