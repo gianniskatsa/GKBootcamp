@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
     <title>Private School Management Application</title>
+    <link rel="icon" type="image/png"  href="assets/images/favicon.ico">
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,7 +40,7 @@
                             <button class="filled-icon-button" title="Press to begin adding or editing"
                                     onclick="enableStudentFields()">Edit
                             </button>
-                            <form id="contact" name="form" method="post">
+                            <form method="post">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <fieldset>
@@ -73,11 +74,12 @@
                                                                              required="" disabled>
                                     </div>
                                 </div>
+                                <button class="filled-icon-button" type="submit" title="Press to submit"
+                                        onclick="return submitSuccessD()">
+                                    Submit
+                                </button>
                             </form>
-                            <button class="filled-icon-button" type="submit" title="Press to submit"
-                                    onclick="return submitSuccessD()">
-                                Submit
-                            </button>
+
                         </div>
                     </div>
                 </div>

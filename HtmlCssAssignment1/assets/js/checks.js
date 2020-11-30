@@ -101,6 +101,19 @@ function submitSuccess() {
         return false;
     }
 }
+function submitSuccessT() {
+    var x = document.getElementById("myinput").value
+    var y = document.getElementById("myinput1").value
+    var z = document.getElementById("myinput2").value
+    if (x.length > 3 && y.length > 3 && z.length > 3) {
+        alert("Your input " + x + " " + y + " " + z + " has been successfully submitted");
+        return true;
+    } else {
+        alert("Please input the correct details!")
+        return false;
+    }
+}
+
 
 function submitSuccessC() {
     var x = document.getElementById("myinput").value
