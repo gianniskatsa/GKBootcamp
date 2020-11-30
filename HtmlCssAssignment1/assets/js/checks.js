@@ -1,22 +1,4 @@
-function enableFields() {
-    var x = document.getElementById("myinput").disabled
-    if (x === true) {
-        document.getElementById("myinput").disabled = false;
-        document.getElementById("myinput1").disabled = false;
-        document.getElementById("myinput2").disabled = false;
-        document.getElementById("myinput3").disabled = false;
-        document.getElementById("myinput4").disabled = false;
 
-
-    } else {
-        document.getElementById("myinput").disabled = true;
-        document.getElementById("myinput1").disabled = true;
-        document.getElementById("myinput2").disabled = true;
-        document.getElementById("myinput3").disabled = true;
-        document.getElementById("myinput4").disabled = true;
-
-    }
-}
 
 function enableStudentFields() {
     var x = document.getElementById("myinput").disabled
@@ -50,7 +32,7 @@ function enableSimpleAssignmentFields() {
     }
 }
 
-function enableAssignmentFields() {
+function enableFields() {
     var x = document.getElementById("myinput").disabled
     if (x === true) {
         document.getElementById("myinput").disabled = false;
