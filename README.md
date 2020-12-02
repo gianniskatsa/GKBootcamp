@@ -1,2 +1,1 @@
-# GKBootcamp
-Projects created during PeopleCert Coding Bootcamp
+# Projects created during PeopleCert Coding Bootcamp
