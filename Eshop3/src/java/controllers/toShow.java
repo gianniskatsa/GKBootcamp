@@ -51,7 +51,7 @@ public class toShow extends HttpServlet {
             throws ServletException, IOException {
         List<ProductDao> products = new ArrayList<ProductDao>();
         for (int i = 0; i < 3; i++) {
-            if (request.getParameter("checkpr" + i) == null) {
+            if (request.getParameter("checkpr" + i) != null && parseInt(request.getParameter("quantity" + i)) != 0) {
                 products.add(new ProductDao(parseInt(request.getParameter("product" + i)),
                         request.getParameter("product" + i), parseInt(request.getParameter("price" + i)),
                         parseInt(request.getParameter("quantity" + i))));
@@ -60,21 +60,33 @@ public class toShow extends HttpServlet {
         }
         double totalPrice = sumProductsPrices(products);
         System.out.println(totalPrice);
-        for (int i = 0; i < 3; i++) {
-            if ((request.getParameter("check" + i) == null)) {
-                int customerId = parseInt(request.getParameter("customer" + i));
-                int order2id = insertIntoOrders2(customerId, totalPrice);
-                for (ProductDao productDao : products) {
-                    insertIntoOrders2Details(order2id, productDao.getId(), productDao.getPrice(), productDao.getQuantity());
-                }
+
+        if ((request.getParameter("check1") != null)) {
+            int customerId = parseInt(request.getParameter("customer1"));
+            int order2id = insertIntoOrders2(customerId, totalPrice);
+            for (ProductDao productDao : products) {
+                insertIntoOrders2Details(order2id, productDao.getId(), productDao.getPrice(), productDao.getQuantity());
             }
-            printingHtmlPost(response);
+        } else if ((request.getParameter("check2") != null)) {
+            int customerId = parseInt(request.getParameter("customer2"));
+            int order2id = insertIntoOrders2(customerId, totalPrice);
+            for (ProductDao productDao : products) {
+                insertIntoOrders2Details(order2id, productDao.getId(), productDao.getPrice(), productDao.getQuantity());
+            }
+        } else if ((request.getParameter("check3") != null)) {
+            int customerId = parseInt(request.getParameter("customer3"));
+            int order2id = insertIntoOrders2(customerId, totalPrice);
+            for (ProductDao productDao : products) {
+                insertIntoOrders2Details(order2id, productDao.getId(), productDao.getPrice(), productDao.getQuantity());
+            }
         }
+        printingHtmlPost(response);
+
     }
 
     private void enterCustomers(PrintWriter out, List<Customer> customers) {
         out.println("<div class='col-md-12'>");
-        out.println("<h4>Please UNtick 1 customer to select him</h4>");
+        out.println("<h4>Please tick 1 customer to select him</h4>");
         out.println("<form method=\"POST\">");
         out.println(" <div class=\"row\">");
 
@@ -84,7 +96,7 @@ public class toShow extends HttpServlet {
                 int customerId = customerDao.getId();
                 String firstName = customerDao.getFirstName();
                 String lastName = customerDao.getLastName();
-                out.println("</br><input type='checkbox' checked " + "name=check" + i + "'" + ">");
+                out.println("</br><input type='checkbox'  " + "name=check" + i + ">");
                 out.println("<input  " + "name='customer" + i + "'" + " type=\"text\" value='" + customerId + ") " + firstName + " " + lastName + "'></br>");
                 i++;
                 out.println("</div>");
@@ -97,7 +109,7 @@ public class toShow extends HttpServlet {
     private int enterMoreProducts(List<Product> products, PrintWriter out) {
         int result = 0;
 
-        out.println("</br><h4 >Please UNtick the products you want to submit and enter their quantities </h4>");
+        out.println("</br><h4 >Please tick the products you want to submit and enter their quantities </h4>");
         out.println("</br></br> <div class=\"row\">");
         for (int i = 0; i < 1; i++) {
             for (Product productDao : products) {
@@ -108,7 +120,7 @@ public class toShow extends HttpServlet {
                 int quantity = productDao.getQuantity();
                 out.println("</br><input  " + "name='product" + i + "'" + " type=\"text\" value='" + productId + ") " + name + " " + "'></br>");
                 out.println("</br><input placeholder='Enter quantity' " + "name='quantity" + i + "'" + " type=\"number\" \" \n" + "+value='" + quantity + "' >");
-                out.println("</br></br><input type='checkbox' checked value='checked' " + "name=checkpr" + i + "'" + ">");
+                out.println("</br></br><input type='checkbox'  value='checked' " + "name=checkpr" + i + ">");
                 out.println("<input hidden " + "name='price" + i + "'" + " type=\"text\" value='" + price + " " + "'></br>");
                 out.println("</div>");
                 i++;
@@ -134,7 +146,6 @@ public class toShow extends HttpServlet {
         out.println("<div class=\"jumbotron text-center\" id=\"jumb\">");
         out.println("<h1>My Preciousss E-shop</h1>");
         out.println("<p>Don't buy the Ring ;)</p>");
-        out.println("<p>Due to limitations you have to UNtick 1 customer and multiple products to sumbit them to the database.</p>");
         out.println("</div>");
         out.println("</div>");
         out.println("</div>");
@@ -142,14 +153,11 @@ public class toShow extends HttpServlet {
     }
 
     private void printingHtmlGet2(PrintWriter out) {
-
         out.println("<div class='row'>");
         out.println("<div class=\"col-md-4\">");
         out.println("</div>");
         out.println("<div class=\"col-md-4\">");
-
         out.println("</br></br> <input class=\" btn btn-outline-danger my-2 my-sm-0 \" type=\"submit\" value=\"submit\" name=\"sumbit\" />\n");
-
         out.println("</div>");
         out.println("</form>");
         out.println("</div>");
@@ -245,7 +253,6 @@ public class toShow extends HttpServlet {
             stmt1.setDouble(3, price);
             stmt1.setInt(4, quantity);
             stmt1.execute();
-            ResultSet rs1 = stmt1.getGeneratedKeys();
         } catch (SQLException e) {
             Logger.getLogger(toShow.class
                     .getName()).log(Level.SEVERE, null, e);
