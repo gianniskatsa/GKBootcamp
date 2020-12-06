@@ -18,6 +18,7 @@ import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Date;
 
 @WebServlet(name = "toShow", urlPatterns = {"/"})
 public class toShow extends HttpServlet {
@@ -49,7 +50,7 @@ public class toShow extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        List<ProductDao> products = new ArrayList<ProductDao>();
+        List<ProductDao> products = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             if (request.getParameter("checkpr" + i) != null && parseInt(request.getParameter("quantity" + i)) != 0) {
                 products.add(new ProductDao(parseInt(request.getParameter("product" + i)),
@@ -207,32 +208,29 @@ public class toShow extends HttpServlet {
         int thisInt = 0;
         try {
             thisInt = ((Number) NumberFormat.getInstance().parse(x)).intValue();
-
         } catch (ParseException ex) {
             Logger.getLogger(toShow.class
                     .getName()).log(Level.SEVERE, null, ex);
         }
-
         return thisInt;
     }
 
     public int insertIntoOrders2(int customerId, double totalPrice) {
         int productId = 0;
-        PreparedStatement stmt1 = null;
         java.sql.Timestamp date = getCurrentTimeStamp();
         try {
             Connection con1 = getConnection();
             String sql1 = "insert into oders2(date, customers_id, total_price) values(?, ?, ?)";
-            stmt1 = con1.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stmt1 = con1.prepareStatement(sql1, Statement.RETURN_GENERATED_KEYS);
             stmt1.setTimestamp(1, date);
             stmt1.setInt(2, customerId);
             stmt1.setDouble(3, totalPrice);
             stmt1.execute();
             ResultSet rs1 = stmt1.getGeneratedKeys();
-            while (rs1.next()) {
-                productId = rs1.getInt(1);
-                System.out.println("productId");
-            }
+            rs1.next();
+            productId = rs1.getInt(1);
+            System.out.println("productId");
+
         } catch (SQLException e) {
             Logger.getLogger(toShow.class
                     .getName()).log(Level.SEVERE, null, e);
@@ -242,12 +240,10 @@ public class toShow extends HttpServlet {
 
     public int insertIntoOrders2Details(int orders2Id, int productsId, double price, int quantity) {
         int result = 0;
-        PreparedStatement stmt1 = null;
-        java.sql.Timestamp date = getCurrentTimeStamp();
         try {
             Connection con1 = getConnection();
             String sql1 = "insert into orders2_details(orders2_id, products_id, price, quantity) values(?, ?, ?, ?)";
-            stmt1 = con1.prepareStatement(sql1);
+            PreparedStatement stmt1 = con1.prepareStatement(sql1);
             stmt1.setInt(1, orders2Id);
             stmt1.setInt(2, productsId);
             stmt1.setDouble(3, price);
@@ -260,8 +256,8 @@ public class toShow extends HttpServlet {
         return result;
     }
 
-    private static java.sql.Timestamp getCurrentTimeStamp() {
-        java.util.Date today = new java.util.Date();
-        return new java.sql.Timestamp(today.getTime());
+    private static Timestamp getCurrentTimeStamp() {
+        Date today = new Date();
+        return new Timestamp(today.getTime());
     }
 }
